@@ -1,0 +1,50 @@
+{
+  "name": "youtube-json-server",
+  "version": "1.0.0",
+  "description": "Your personal Youtube API server to get Youtube API responses without needing credentials. ",
+  "main": "subreddit.js",
+  "scripts": {
+    "test": "ava --timeout=1m",
+    "build": "npm run production",
+    "deploy": "now",
+    "dev": "now dev",
+    "start": "npm run production",
+    "clean": "npm cache clean --force",
+    "rebuild-sass": "npm rebuild node-sass --force",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThatGuySam/youtube-json-server.git"
+  },
+  "author": "@ThatGuySam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThatGuySam/youtube-json-server/issues"
+  },
+  "homepage": "https://github.com/ThatGuySam/youtube-json-server#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "googleapis": "^47.0.0"
+  },
+  "devDependencies": {
+    "ava": "^3.5.0",
+    "cross-env": "^7.0.2",
+    "esm": "^3.2.25",
+    "laravel-mix": "^5.0.4",
+    "puppeteer": "^2.1.1",
+    "test-listen": "^1.1.0",
+    "vue-template-compiler": "^2.6.11",
+    "zeit-now-node-server": "^1.0.1"
+  }
+}

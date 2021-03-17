@@ -1,0 +1,6 @@
+.now
+/node_modules
+/.env
+/test/snapshots/*
+/public/dist
+/mix-manifest.json
